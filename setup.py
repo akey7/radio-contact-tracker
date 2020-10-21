@@ -4,10 +4,10 @@ from setuptools import setup, find_packages
 
 # Top-level setup
 setup(
-    name             = 'radio-contact-tracker',
+    name             = 'radio_contact_tracker',
     version          = '0.1.0',
     description      = '',
-    long_description =  'radio-contact-tracker is a utility for tracking reception logs from WSJT-X log files.',
+    long_description =  'radio_contact_tracker is a utility for tracking reception logs from WSJT-X log files.',
     url              = 'https://github.com/akey7/radio-contact-tracker',
     author           = 'Alicia M. Key, AA0NS',
     author_email     = 'alicia@aa0ns.com',

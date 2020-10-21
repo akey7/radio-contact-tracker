@@ -6,5 +6,5 @@ Home-page: https://github.com/akey7/radio-contact-tracker
 Author: Alicia M. Key, AA0NS
 Author-email: alicia@aa0ns.com
 License: MIT
-Description: radio-contact-tracker is a utility for tracking reception logs from WSJT-X log files.
+Description: radio_contact_tracker is a utility for tracking reception logs from WSJT-X log files.
 Platform: UNKNOWN
