@@ -13,13 +13,20 @@ class RadioContactTracker:
             for line in alt_txt.readlines():
                 squeezed = re.sub("\s\s+", " ", line)
                 squeezed = squeezed.split(" ")
-                year = f"20{squeezed[0][:2]}"
-                month = squeezed[0][2:4]
-                day = squeezed[0][7:9]
-                hour = squeezed[0][9:11]
-                minute = squeezed[0][11:13]
-                second = squeezed[0][13:15]
-                print(year, month, day, hour, minute, second)
+
+                row = {
+                    "year": f"20{squeezed[0][:2]}",
+                    "month": squeezed[0][2:4],
+                    "day": squeezed[0][7:9],
+                    "mhz": squeezed[1],
+                    "direction": squeezed[2],
+                    "mode": squeezed[3],
+                    "db": squeezed[4],
+                    "destination": squeezed[7],
+                    "source": squeezed[8],
+                }
+
+                print(row)
 
 
 if __name__ == "__main__":
