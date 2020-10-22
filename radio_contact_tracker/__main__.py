@@ -19,10 +19,6 @@ class RadioContactTracker:
                     "month": squeezed[0][2:4],
                     "day": squeezed[0][7:9],
                     "mhz": squeezed[1],
-                    "direction": squeezed[2],
-                    "mode": squeezed[3],
-                    "db": squeezed[4],
-                    "destination": squeezed[7],
                     "source": squeezed[8],
                 }
 
