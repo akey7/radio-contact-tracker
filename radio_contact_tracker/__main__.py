@@ -9,6 +9,7 @@ class RadioContactTracker:
         self.all_txt_records: List[Dict[str, Union[str, float]]] = []
 
     def read_all_txt(self) -> None:
+        self.all_txt_records = []
         with open(self.all_txt_filename, "r") as alt_txt:
             for line in alt_txt.readlines():
                 squeezed = re.sub("\s\s+", " ", line)
@@ -22,7 +23,11 @@ class RadioContactTracker:
                     "source": squeezed[8],
                 }
 
-                print(row)
+                self.all_txt_records.append(row)
+
+    def unique_callsigns(self):
+        sources = set(row["source"] for row in self.all_txt_records)
+        return sources
 
 
 if __name__ == "__main__":
@@ -31,3 +36,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     tracker = RadioContactTracker(args.input)
     tracker.read_all_txt()
+    print(len(tracker.unique_callsigns()))
