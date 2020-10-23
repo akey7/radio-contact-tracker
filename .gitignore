@@ -137,5 +137,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Ignore example .txt files
-all.txt
+# Ignore example .txt files and output .csv files
+*.txt
+*.csv
